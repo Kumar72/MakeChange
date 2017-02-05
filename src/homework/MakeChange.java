@@ -4,9 +4,8 @@ import java.util.*;
 
 public class MakeChange {
 	public static void main(String[] args) {
-
 		promptUser();
-
+		//Everything happens behind the scene :) 
 	}
 
 	public static void promptUser() {
@@ -33,18 +32,16 @@ public class MakeChange {
 			} else if (tendered == price) {
 				System.out.print("Thank you, Come again!!");
 			} else { // make another method to find the exact change to pay back
-						// the
-						// customer
+						// the customer
 				payBack(price, tendered);
 				// System.out.print(change);
 			}
 			System.out.print("\nWould you like to purchase another item (Y/N): ");
 			newItem = kb.next();
-
 		} while (newItem.toUpperCase().equals("Y"));
 		kb.close();
 	}
-
+	
 	public static void payBack(double price, double tendered) {
 		double[] bill = { 20, 10, 5, 1, 0.25, 0.10, 0.05, 0.01 };
 		int[] change = new int[8];
@@ -77,12 +74,11 @@ public class MakeChange {
 			}
 		}
 	}
-
 	// To allow the user to re-make the payment until its above the item price!!
 	public static void priceCheck(String rePay, Scanner kb, double itemP, double t) {
 		double addedSum = 0;
+		
 		outerloop:
-
 		// newDiff is (tendered - price) from payBack method and addedSum is the
 		// new payment
 		while (true) {
@@ -91,8 +87,8 @@ public class MakeChange {
 				addedSum = kb.nextDouble();
 				if ((addedSum + t) < itemP) {
 					t = t + addedSum;
-					System.out.print("\nSorry, but you are still short $" + ((itemP * 100 - t * 100) / 100)
-							+ ".\n Would you like to pay the difference again. (Y/N): ");
+					System.out.print("\nSorry, but you are still short $" + (Math.round(itemP - t ))
+							+ ".\n Would you like to pay the difference. (Y/N): ");
 					rePay = kb.next();
 					continue outerloop;
 				} else if ((addedSum + t) > itemP) {
@@ -102,10 +98,11 @@ public class MakeChange {
 					// NEED TO RETURN IT BACK!
 				}
 			} else {
-				System.out.print("Thank you, and come back when you have the money!");
+				System.out.print("Thank you, and please come back when you have the money!");
 				System.exit(0);;
 			}
+			break;
 		}
-
 	}
 }
+
