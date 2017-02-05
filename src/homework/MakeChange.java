@@ -6,6 +6,7 @@ public class MakeChange {
 	public static void main(String[] args) {
 
 		promptUser();
+		
 //		advancePromptUser();  gonna work on version 2 later 
 	}
 
@@ -23,7 +24,7 @@ public class MakeChange {
 
 		if (tendered < price) {
 			System.out.println(
-					"Sorry, you are short by $" + (price - tendered) + "/nWould you like to pay the difference? ");
+					"Sorry, you are short by $" + (price - tendered) + "\nWould you like to pay the difference? ");
 		} else if (tendered == price) {
 			System.out.print("Thank you, Come again!!");
 		} else { // make another method to find the exact change to pay back the
@@ -53,9 +54,16 @@ public class MakeChange {
 		System.out.println("Your change is: ");
 		for (int j = 0; j < change.length; j++) {
 			if ((int) change[j] != 0) {
-				System.out.print("$"+bill[j] + ":\t");
-				System.out.print(change[j]);
-				System.out.print("\n");
+				if ((bill[j]) >= 0) {
+					System.out.print("$"+bill[j] + ":\t");
+					System.out.print(change[j]);
+					System.out.print("\n");	
+				}
+				if ((bill[j]) < 0) {
+					System.out.print(bill[j] + "c:\t");
+					System.out.print(change[j]);
+					System.out.print("\n");
+				}		
 			}
 		}
 	}
