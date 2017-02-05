@@ -5,8 +5,7 @@ import java.util.*;
 public class MakeChangeBasic {
 	public static void main(String[] args) {
 
-		promptUser();
-		
+		promptUser();		
 //		advancePromptUser();  gonna work on version 2 later 
 	}
 
@@ -24,7 +23,8 @@ public class MakeChangeBasic {
 
 		if (tendered < price) {
 			System.out.println(
-					"Sorry, you are short by $" + (price - tendered) + "\nWould you like to pay the difference? ");
+					"Sorry, you are short by $" + (price - tendered)); 
+			// + "\nWould you like to pay the difference? ");
 		} else if (tendered == price) {
 			System.out.print("Thank you, Come again!!");
 		} else { // make another method to find the exact change to pay back the
