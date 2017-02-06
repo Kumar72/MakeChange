@@ -87,7 +87,7 @@ public class MakeChange {
 				addedSum = kb.nextDouble();
 				if ((addedSum + t) < itemP) {
 					t = t + addedSum;
-					System.out.print("\nSorry, but you are still short $" + (itemP - t )
+					System.out.print("\nSorry, but you are still short $" + ((itemP*100 - t*100)/100)
 							+ ".\n Would you like to pay the difference. (Y/N): ");
 					rePay = kb.next();
 					continue outerloop;
