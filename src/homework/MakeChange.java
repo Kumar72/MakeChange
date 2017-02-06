@@ -6,6 +6,7 @@ public class MakeChange {
 	public static void main(String[] args) {
 		promptUser();
 		//Everything happens behind the scene :) 
+		//Also use everything I have learned last week!! 
 	}
 
 	public static void promptUser() {
