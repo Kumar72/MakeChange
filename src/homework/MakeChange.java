@@ -91,8 +91,8 @@ public class MakeChange {
 				addedSum = kb.nextDouble();
 				if ((addedSum + t) < itemP) {
 					t = t + addedSum;
-					System.out.print("\nSorry, but you are still short $" + ((itemP * 100 - t * 100) / 100)
-							+ ".\n Would you like to pay the difference again. (Y/N): ");
+					System.out.print("\nSorry, but you are still short $" + ((itemP*100 - t*100 )/100)
+							+ ".\n Would you like to pay the difference. (Y/N): ");
 					rePay = kb.next();
 					continue outerloop;
 				} else if ((addedSum + t) > itemP) {
@@ -102,9 +102,9 @@ public class MakeChange {
 					// NEED TO RETURN IT BACK!
 				}
 			} else {
-				System.out.print("Thank you, and come back when you have the money!");
+				System.out.print("Thank you, and please come back when you have the money!");
 				System.exit(0);;
-			}
+			}break;
 		}
 
 	}
