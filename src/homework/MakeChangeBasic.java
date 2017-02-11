@@ -5,9 +5,8 @@ import java.util.*;
 public class MakeChangeBasic {
 	public static void main(String[] args) {
 
-		promptUser();
-
-//		advancePromptUser();  gonna work on version 2 later
+		promptUser();		
+//		advancePromptUser();  gonna work on version 2 later 
 	}
 
 	public static void promptUser() {
@@ -24,8 +23,8 @@ public class MakeChangeBasic {
 
 		if (tendered < price) {
 			System.out.println(
-					"Sorry, you are short by $" + (price - tendered));
-					// + "\nWould you like to pay the difference? ");
+					"Sorry, you are short by $" + (price - tendered)); 
+			// + "\nWould you like to pay the difference? ");
 		} else if (tendered == price) {
 			System.out.print("Thank you, Come again!!");
 		} else { // make another method to find the exact change to pay back the
@@ -42,7 +41,7 @@ public class MakeChangeBasic {
 		int[] change = new int[8];
 		double difference = tendered - price;
 		// I want to store the number that can divide the difference into an
-		// array and then change the difference to the new remainder
+		// array and then change the difference to the new remainder 
 		for (int i = 0; i < change.length; i++) {
 			if (difference/bill[i] > 0) {
 				change[i] = ((int) (difference / bill[i]));
@@ -58,13 +57,13 @@ public class MakeChangeBasic {
 				if ((bill[j]) >= 0) {
 					System.out.print("$"+bill[j] + ":\t");
 					System.out.print(change[j]);
-					System.out.print("\n");
+					System.out.print("\n");	
 				}
 				if ((bill[j]) < 0) {
 					System.out.print(bill[j] + "c:\t");
 					System.out.print(change[j]);
 					System.out.print("\n");
-				}
+				}		
 			}
 		}
 	}
