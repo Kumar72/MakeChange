@@ -10,7 +10,7 @@
 $ javac project/MakeChange.java
 ```
 ## Code Example:
-- Passing two parameters, *amount* and *tendered*:
+- User can pass two parameters, *amount* and *tendered*:
 ```
 
 ```
